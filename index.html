@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some creative title</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body class="page">
+    <form class="form form_centered">
+        <header class="form__header">Задать вопрос</header>
+        <input 
+            type="text" 
+            name="name"
+            class="form__input form__input-text form__input-text_content_name" 
+            placeholder="Фамилия Имя Отчество *"
+            autocomplete="off"
+            pattern="[А-Яа-я]+([А-Яа-я]*[- ]?[А-Яа-я]+)*"
+            required>
+        <input 
+            type="tel" 
+            name="phone"
+            class="form__input form__input-text form__input-text_content_phone" 
+            placeholder="Телефон *"
+            autocomplete="off"
+            pattern="\+?(\d+[- ])*\d+"
+            required>
+        <input 
+            type="email" 
+            name="email"
+            class="form__input form__input-text form__input-text_content_email" 
+            placeholder="Email"
+            autocomplete="off">
+        <button type="submit" class="form__input form__input-submit">Отправить запрос</button>
+    </form>
+
+    <script src="scripts/form_validator.js"></script>
+    <script src="scripts/form_data_sending.js"></script>
+</body>
+</html>
